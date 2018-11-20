@@ -1,0 +1,27 @@
+<a name="n1">*</a> The free [PureScript By Example](https://leanpub.com/purescript/read) book contains several practical projects for PureScript beginners.
+
+---
+
+## Contribution opportunities:
+- Create an issue for any question you have
+- Docs
+- Feedback on this library's API and code
+- Test it on non-windows platforms, report any issues you find
+- Showcase your app
+- Add an example that uses Elm or Rust compiled to asm.js
+- Add a PureScript example that does two-way communication with the backend
+- Contribute to the original webview library: E.g. [add HDPI support on Windows](https://github.com/zserge/webview/issues/54)
+- Make it possible to create the webview window as a child window of a given parent window. This would allow webview to be used for the GUIs of [VST audio plugins in Rust](https://github.com/rust-dsp/rust-vst).
+
+---
+
+### Ideas for apps:
+- Rust IDE (by porting [xi-electron](https://github.com/acheronfail/xi-electron) to web-view)
+- Data visualization / plotting lib for Rust, to make Rust more useful for data science
+- Crypto coin wallet
+- IRC client, or client for other chat protocols
+- Midi song editor, VJ controller
+- Rust project template wizard: Generate new Rust projects from templates with user-friendly steps
+- GUI for [pijul](https://pijul.org/)
+
+---

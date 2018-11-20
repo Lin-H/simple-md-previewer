@@ -1,0 +1,10 @@
+[package]
+name = "markdown"
+version = "0.1.0"
+authors = ["Lin-H <lh04667649@qq.com>"]
+
+[dependencies]
+web-view = { path = "../web-view", version = "*" }
+urlencoding = "*"
+serde_derive = "*"
+serde_json = "*"

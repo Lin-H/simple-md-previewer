@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: 微软雅黑;
+}
+
+#app {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+}
