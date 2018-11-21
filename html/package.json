@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "showdown": "^1.9.0"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.7"
   }
 }
