@@ -1,13 +1,24 @@
-import showdown from 'showdown'
+import 'highlight.js/styles/monokai-sublime.css'
+import 'github-markdown-css'
+import hljs from 'highlight.js'
 
-var  converter = new showdown.Converter(),
-    text      = '# hello, markdown!\nhttp://www.baidu.com',
-    html      = converter.makeHtml(text)
+var md = require('markdown-it')({
+  html: true,
+  linkify: true,
+  typographer: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return '<pre class="hljs"><code>' +
+               hljs.highlight(lang, str, true).value +
+               '</code></pre>';
+      } catch (__) {}
+    }
+    return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+  }
+})
 
-showdown.setFlavor('github');
-// showdown.setOption('ghCompatibleHeaderId', true);
-// showdown.setOption('simplifiedAutoLink', false);
-// showdown.setOption('strikethrough', true)
+var html = md.render('# hello, markdown!\ndrag md file.')
 
 var body = document.querySelector('#app')
 body.innerHTML = html
@@ -32,7 +43,7 @@ body.addEventListener('drop', function(e) {
 
             reader.onload = function(e2) {
                 // finished reading file data.
-                body.innerHTML = converter.makeHtml(e2.target.result)
+                body.innerHTML = md.render(e2.target.result)
             }
 
             reader.readAsText(file); // start reading the file data.

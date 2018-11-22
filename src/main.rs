@@ -8,6 +8,7 @@ fn main() {
     WebViewBuilder::new()
         .title("Markdown")
         .content(Content::Html(include_str!("../html/dist/bundle.html")))
+        // .content(Content::Url("http://localhost:1234"))
         .size(800, 600)
         .resizable(true)
         .debug(true)
