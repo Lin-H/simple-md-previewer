@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel serve index.html",
     "build": "parcel build --public-url ./ --no-source-maps index.html",
     "pack": "inline-assets ./dist/index.html > ./dist/bundle.html"
   },

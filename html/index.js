@@ -1,4 +1,4 @@
-import 'highlight.js/styles/monokai-sublime.css'
+import 'highlight.js/styles/github.css'
 import 'github-markdown-css'
 import hljs from 'highlight.js/lib/highlight.js'
 
