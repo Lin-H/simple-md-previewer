@@ -1,5 +1,7 @@
 os: windows
-language: rust
+language: 
+  - rust
+  - node_js
 rust:
   - stable
 sudo: enabled
@@ -9,19 +11,15 @@ branches:
 
 cache:
   - cargo
+  - npm
   - directories:
     - ./html/node_modules
-
-before_install:
-  - choco install nodejs.install
-  - refreshenv
 
 before_script:
   - cd html
   - npm i
 
 script:
-  - cd html
   - npm run build
   - npm run pack
   - cd..
