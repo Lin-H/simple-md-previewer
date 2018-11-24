@@ -1,0 +1,27 @@
+os: windows
+language: rust
+rust:
+  - stable
+sudo: enabled
+branches:
+  only:
+  - master
+
+cache:
+  - cargo
+  directories:
+    - ./html/node_modules
+
+before_install:
+  - nvm install lts/carbon
+
+before_script:
+  - cd html
+  - npm i
+
+script:
+  - cd html
+  - npm run build
+  - npm run pack
+  - cd..
+  - cargo build --verbose
