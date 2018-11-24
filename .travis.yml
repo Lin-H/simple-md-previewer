@@ -13,7 +13,7 @@ cache:
     - ./html/node_modules
 
 before_install:
-  - nvm install lts/carbon
+  - choco install nodejs.install
 
 before_script:
   - cd html
