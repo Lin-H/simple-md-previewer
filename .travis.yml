@@ -9,7 +9,7 @@ branches:
 
 cache:
   - cargo
-  directories:
+  - directories:
     - ./html/node_modules
 
 before_install:
